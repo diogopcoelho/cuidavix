@@ -15,7 +15,7 @@ import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String URL = "http://192.168.0.101:8080/GiscarWeb/rest/syncronize/mapped/"; // Emulador
+    private static final String URL = "https://diogopcoelho.github.io/cuidavix/"; // Emulador
 
     private Location glo = null;
 

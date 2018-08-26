@@ -1,0 +1,21 @@
+<form class="form-signin" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+  <label for="inputEmail" class="sr-only">Usuário</label>
+  <input type="text" formControlName="login" id="inputEmail" class="form-control" placeholder="Usuário" required autofocus>
+  <div *ngIf="login.invalid && (login.dirty || login.touched)" class="alert alert-danger">
+    <div *ngIf="login.errors.required">
+      Login é obrigatório.
+    </div>
+  </div>
+  <label for="inputPassword" class="sr-only">Senha</label>
+  <input type="password" formControlName="senha" id="inputPassword" class="form-control" placeholder="Senha" required>
+  <div *ngIf="senha.invalid && (senha.dirty || senha.touched)" class="alert alert-danger">
+    <div *ngIf="senha.errors.required">
+      Login é obrigatório.
+    </div>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" [disabled]="!profileForm.valid" type="submit">Sign in</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+</form>
+<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
